@@ -155,6 +155,7 @@ import io.trino.type.TypeDeserializer;
 import io.trino.type.TypeOperatorsCache;
 import io.trino.type.TypeSignatureDeserializer;
 import io.trino.type.TypeSignatureKeyDeserializer;
+import io.trino.server.ui.PlanAnalyzerModule;
 import io.trino.util.EmbedVersion;
 import io.trino.util.FinalizerService;
 
@@ -505,6 +506,8 @@ public class ServerMainModule
         // Added for RuleStatsSystemTable
         // TODO: remove this when system tables are bound separately for coordinator and worker
         newOptionalBinder(binder, RuleStatsRecorder.class);
+
+        install(new PlanAnalyzerModule());
 
         // cleanup
         closingBinder(binder).registerExecutor(Key.get(ScheduledExecutorService.class, ForExchange.class));

@@ -159,6 +159,21 @@ export class PageTitle extends React.Component<Props, State> {
                                 </li>
                                 <li>
                                     <span className="navbar-cluster-info">
+                                        <span className="text">
+                                        <a
+                                            className="btn btn-default"
+                                            href="/ui/plan_analyzer.html"
+                                            style={{ marginRight: '10px' }}
+                                            target="_blank"  // Opens in new tab
+                                            rel="noopener noreferrer"
+                                            >
+                                            Plan Analyzer
+                                        </a>
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span className="navbar-cluster-info">
                                         <span className="text" id="logout">
                                             <a className="btn btn-logout" href="logout">
                                                 Log Out

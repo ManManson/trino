@@ -30,6 +30,7 @@ public class ServerConfig
     private Duration gracePeriod = new Duration(2, MINUTES);
     private boolean queryResultsCompressionEnabled = true;
     private Optional<String> queryInfoUrlTemplate = Optional.empty();
+    private boolean webUiPlanAnalyzerEnabled = true;
 
     public boolean isCoordinator()
     {
@@ -103,5 +104,17 @@ public class ServerConfig
     {
         this.queryInfoUrlTemplate = Optional.ofNullable(queryInfoUrlTemplate);
         return this;
+    }
+
+    @Config("web-ui.plan-analyzer.enabled")
+    public ServerConfig setWebUiPlanAnalyzerEnabled(boolean enabled)
+    {
+        this.webUiPlanAnalyzerEnabled = enabled;
+        return this;
+    }
+
+    public boolean isWebUiPlanAnalyzerEnabled()
+    {
+        return webUiPlanAnalyzerEnabled;
     }
 }

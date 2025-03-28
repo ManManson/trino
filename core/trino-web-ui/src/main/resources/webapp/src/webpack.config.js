@@ -8,6 +8,7 @@ module.exports = {
         index: __dirname + '/index.jsx',
         query: __dirname + '/query.jsx',
         plan: __dirname + '/plan.jsx',
+        plan_analyzer: __dirname + '/plan_analyzer.jsx',
         embedded_plan: __dirname + '/embedded_plan.jsx',
         references: __dirname + '/references.jsx',
         stage: __dirname + '/stage.jsx',
